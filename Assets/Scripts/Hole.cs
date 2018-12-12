@@ -15,7 +15,7 @@ public class Hole : MonoBehaviour {
     }
 
     // Colliderが他のトリガーイベントに侵入したとき
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == activeTag)
         {
@@ -24,15 +24,15 @@ public class Hole : MonoBehaviour {
     }
 
     // Collider が他のトリガーに触れるのをやめたとき
-    private void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == activeTag)
         {
-            fallIn = true;
+            fallIn = false;
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    void OnTriggerStay(Collider other)
     {
         // コライダーに触れているオブジェクトのRigidbodyコンポーネントを取得
         Rigidbody r = other.gameObject.GetComponent<Rigidbody>();

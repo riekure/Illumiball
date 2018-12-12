@@ -21,7 +21,7 @@ public class GravityController : MonoBehaviour {
         Vector3 vector = new Vector3();
 
         // Unityエディタと実機で処理を分ける
-        if (Input.GetKey("z"))
+        if (Application.isEditor)
         {
             // キー入力を検知してベクトルを設定
             vector.x = Input.GetAxis("Horizontal");
