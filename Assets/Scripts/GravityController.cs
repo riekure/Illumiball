@@ -9,11 +9,6 @@ public class GravityController : MonoBehaviour {
 
     // 重力の適用具合
     public float gravityScale = 1.0f;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -25,7 +20,7 @@ public class GravityController : MonoBehaviour {
         {
             // キー入力を検知してベクトルを設定
             vector.x = Input.GetAxis("Horizontal");
-            vector.y = Input.GetAxis("Vertical");
+            vector.z = Input.GetAxis("Vertical");
 
             // 高さ方向の判定はキーのzとする
             if (Input.GetKey("z"))

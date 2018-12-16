@@ -9,7 +9,7 @@ public class Hole : MonoBehaviour {
     public string activeTag;
 
     // ボールが入っているかを返す
-    public bool InFallIn()
+    public bool IsFallIn()
     {
         return fallIn;
     }
@@ -53,14 +53,4 @@ public class Hole : MonoBehaviour {
             r.AddForce(- direction * r.mass * 80.0f);
         }
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
